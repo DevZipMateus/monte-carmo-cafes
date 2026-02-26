@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monte Carmo Cafés Especiais</title>
+  <meta name="description" content="Monte Carmo Cafés Especiais — Do grão à xícara, com arte e paixão. Cafés especiais, torrefação própria e fornecimento B2B." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo-link">
+        <img src="logo.png" alt="Monte Carmo Cafés Especiais" class="logo-header" />
+      </a>
+      <ul class="nav-desktop">
+        <li><a href="#inicio"    class="nav-link">Início</a></li>
+        <li><a href="#sobre"     class="nav-link">Sobre</a></li>
+        <li><a href="#proposito" class="nav-link">Propósito</a></li>
+        <li><a href="#produtos"  class="nav-link">Produtos</a></li>
+        <li><a href="#servicos"  class="nav-link">B2B</a></li>
+        <li><a href="#galeria"   class="nav-link">Galeria</a></li>
+        <li><a href="#contato"   class="nav-link">Contato</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== NAV MOBILE ===== -->
+  <nav id="navMenu">
+    <button class="nav-close" id="navClose" aria-label="Fechar menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul>
+      <li><a href="#inicio"    class="nav-link">Início</a></li>
+      <li><a href="#sobre"     class="nav-link">Sobre</a></li>
+      <li><a href="#proposito" class="nav-link">Propósito</a></li>
+      <li><a href="#produtos"  class="nav-link">Produtos</a></li>
+      <li><a href="#servicos"  class="nav-link">B2B</a></li>
+      <li><a href="#galeria"   class="nav-link">Galeria</a></li>
+      <li><a href="#contato"   class="nav-link">Contato</a></li>
+    </ul>
+    <div class="nav-social">
+      <a href="https://www.instagram.com/montecarmo.cafe/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5531986222344" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal">
+      <div class="hero-logo-wrap">
+        <img src="logo.png" alt="Monte Carmo Cafés Especiais" class="hero-logo" />
+      </div>
+      <p class="hero-sub">Do grão à xícara, com arte e paixão</p>
+      <div class="hero-btns">
+        <a href="#produtos" class="btn-primary">Nossos Cafés</a>
+        <a href="#contato"  class="btn-outline">Falar Conosco</a>
+      </div>
+    </div>
+    <a href="#sobre" class="hero-scroll" aria-label="Rolar para baixo">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="section sobre-section" id="sobre">
+    <div class="container">
+      <div class="sobre-grid reveal">
+        <div class="sobre-img-wrap">
+          <img src="img/sobre.jpg" alt="Ambiente Monte Carmo" loading="lazy" />
+        </div>
+        <div class="sobre-texto">
+          <span class="section-tag">Nossa História</span>
+          <h2 class="section-title">Uma paixão que <em>transborda</em> na xícara</h2>
+          <p>A Monte Carmo Cafés Especiais nasceu do amor genuíno pelo café — não apenas como bebida, mas como cultura, ritual e encontro. Desde nossa fundação em Belo Horizonte, trabalhamos com grãos cuidadosamente selecionados das melhores regiões produtoras do Brasil.</p>
+          <p>Cada lote é rastreável, cada torra é artesanal e cada xícara carrega a história de quem plantou, colheu e preparou com dedicação.</p>
+          <div class="badges-row">
+            <div class="badge-item">
+              <span class="badge-num">+5</span>
+              <span class="badge-label">Anos de história</span>
+            </div>
+            <div class="badge-item">
+              <span class="badge-num">+30</span>
+              <span class="badge-label">Origens trabalhadas</span>
+            </div>
+            <div class="badge-item">
+              <span class="badge-num">100%</span>
+              <span class="badge-label">Cafés especiais</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROPÓSITO ===== -->
+  <section class="section proposito-section" id="proposito">
+    <div class="proposito-overlay"></div>
+    <div class="container">
+      <div class="proposito-header reveal">
+        <span class="section-tag light">Nosso Propósito</span>
+        <h2 class="section-title light">O que nos <em>move</em> a cada dia</h2>
+      </div>
+      <div class="proposito-cards">
+        <div class="prop-card reveal">
+          <div class="prop-icon"><i class="fas fa-seedling"></i></div>
+          <h3>Missão</h3>
+          <p>Conectar pessoas ao universo dos cafés especiais, valorizando produtores, sustentabilidade e a arte da torra artesanal.</p>
+        </div>
+        <div class="prop-card reveal">
+          <div class="prop-icon"><i class="fas fa-eye"></i></div>
+          <h3>Visão</h3>
+          <p>Ser referência em cafés especiais em Minas Gerais, reconhecidos pela qualidade consistente e pelo relacionamento próximo com nossos clientes.</p>
+        </div>
+        <div class="prop-card reveal">
+          <div class="prop-icon"><i class="fas fa-heart"></i></div>
+          <h3>Valores</h3>
+          <p>Qualidade sem concessões, transparência na cadeia, respeito aos produtores, paixão pelo café e cuidado com cada detalhe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section class="section produtos-section" id="produtos">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Nossos Produtos</span>
+        <h2 class="section-title">Cafés que <em>contam histórias</em></h2>
+        <p class="section-desc">Grãos selecionados das melhores origens, torrados com precisão para revelar o melhor de cada terroir.</p>
+      </div>
+      <div class="produtos-grid">
+
+        <div class="produto-card reveal">
+          <div class="produto-img-wrap">
+            <img src="img/gal3.jpg" alt="Café Espresso" loading="lazy" />
+          </div>
+          <div class="produto-info">
+            <h3>Espresso Clássico</h3>
+            <p>Torra média escura, encorpado e cremoso. Notas de chocolate amargo, caramelo e toque de nozes. Perfeito para o dia a dia.</p>
+            <a href="#contato" class="btn-produto">Solicitar</a>
+          </div>
+        </div>
+
+        <div class="produto-card reveal">
+          <div class="produto-img-wrap">
+            <img src="img/gal2.jpg" alt="Blend Especial" loading="lazy" />
+          </div>
+          <div class="produto-info">
+            <h3>Blend Especial</h3>
+            <p>Harmonização única de origens distintas. Equilíbrio entre acidez cítrica e doçura de frutas vermelhas com torra média.</p>
+            <a href="#contato" class="btn-produto">Solicitar</a>
+          </div>
+        </div>
+
+        <div class="produto-card reveal">
+          <div class="produto-img-wrap">
+            <img src="img/gal1.jpg" alt="Single Origin" loading="lazy" />
+          </div>
+          <div class="produto-info">
+            <h3>Single Origin</h3>
+            <p>Grãos de uma única fazenda selecionada. Terroir autêntico com notas florais e frutadas. Para os verdadeiros apreciadores.</p>
+            <a href="#contato" class="btn-produto">Solicitar</a>
+          </div>
+        </div>
+
+        <div class="produto-card reveal">
+          <div class="produto-img-wrap">
+            <img src="img/gal6.jpg" alt="Café Coado" loading="lazy" />
+          </div>
+          <div class="produto-info">
+            <h3>Café de Coador</h3>
+            <p>Torra clara a média, moagem específica para coador. Revela a complexidade do grão com suavidade e delicadeza.</p>
+            <a href="#contato" class="btn-produto">Solicitar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS B2B ===== -->
+  <section class="section servicos-section" id="servicos">
+    <div class="servicos-overlay"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag light">Fornecimento B2B</span>
+        <h2 class="section-title light">Parceiro certo para o seu <em>negócio</em></h2>
+        <p class="section-desc light">Atendemos cafeterias, restaurantes, hotéis e escritórios com regularidade, qualidade e suporte dedicado.</p>
+      </div>
+      <div class="servicos-grid">
+        <div class="servico-item reveal">
+          <i class="fas fa-store"></i>
+          <h4>Cafeterias</h4>
+          <p>Blend exclusivo com sua identidade, suporte em treinamento e equipamentos.</p>
+        </div>
+        <div class="servico-item reveal">
+          <i class="fas fa-utensils"></i>
+          <h4>Restaurantes</h4>
+          <p>Cardápio de café harmonizado com a sua cozinha, com fornecimento regular.</p>
+        </div>
+        <div class="servico-item reveal">
+          <i class="fas fa-hotel"></i>
+          <h4>Hotéis & Pousadas</h4>
+          <p>Experiência premium para seus hóspedes, do café da manhã ao lobby bar.</p>
+        </div>
+        <div class="servico-item reveal">
+          <i class="fas fa-building"></i>
+          <h4>Escritórios</h4>
+          <p>Cafés especiais no ambiente corporativo, com entrega programada e consistente.</p>
+        </div>
+        <div class="servico-item reveal">
+          <i class="fas fa-graduation-cap"></i>
+          <h4>Treinamento</h4>
+          <p>Cursos de barismo e degustação para sua equipe ou clientes finais.</p>
+        </div>
+        <div class="servico-item reveal">
+          <i class="fas fa-gift"></i>
+          <h4>Kits Presentes</h4>
+          <p>Embalagens personalizadas com sua marca para brindes corporativos e datas especiais.</p>
+        </div>
+      </div>
+      <div class="servicos-cta reveal">
+        <a href="https://wa.me/5531986222344?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20fornecimento%20B2B." target="_blank" class="btn-wpp-grande">
+          <i class="fab fa-whatsapp"></i>Quero ser parceiro
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section class="section galeria-section" id="galeria">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Galeria</span>
+        <h2 class="section-title">Cada ângulo, <em>uma obra</em></h2>
+      </div>
+      <div class="galeria-grid">
+        <div class="gal-item reveal"><img src="img/gal1.jpg" alt="Café especial 1" loading="lazy" /></div>
+        <div class="gal-item reveal gal-tall"><img src="img/gal2.jpg" alt="Café especial 2" loading="lazy" /></div>
+        <div class="gal-item reveal"><img src="img/gal3.jpg" alt="Café especial 3" loading="lazy" /></div>
+        <div class="gal-item reveal gal-wide"><img src="img/gal4.jpg" alt="Café especial 4" loading="lazy" /></div>
+        <div class="gal-item reveal"><img src="img/gal5.jpg" alt="Café especial 5" loading="lazy" /></div>
+        <div class="gal-item reveal"><img src="img/gal6.jpg" alt="Café especial 6" loading="lazy" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="section contato-section" id="contato">
+    <div class="contato-overlay"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag light">Fale Conosco</span>
+        <h2 class="section-title light">Vamos tomar um <em>café juntos?</em></h2>
+        <p class="section-desc light">Entre em contato via WhatsApp e descubra como o Monte Carmo pode transformar a experiência do seu cliente.</p>
+      </div>
+      <div class="contato-grid">
+        <div class="contato-info reveal">
+          <div class="contato-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Endereço</strong>
+              <span>Belo Horizonte, MG</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>(31) 98622-2344</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <i class="fab fa-instagram"></i>
+            <div>
+              <strong>Instagram</strong>
+              <span>@montecarmo.cafe</span>
+            </div>
+          </div>
+        </div>
+        <div class="contato-wpp reveal">
+          <p>Atendemos de <strong>segunda a sábado</strong>, das <strong>8h às 18h</strong>. Resposta rápida e personalizada!</p>
+          <a href="https://wa.me/5531986222344?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20cafés%20especiais." target="_blank" class="btn-wpp-grande">
+            <i class="fab fa-whatsapp"></i>Iniciar conversa no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="logo.png" alt="Monte Carmo Cafés Especiais" class="footer-logo" />
+      <p class="footer-copy">© 2025 Monte Carmo Cafés Especiais — Todos os direitos reservados</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/montecarmo.cafe/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5531986222344" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <!-- ===== BOTÃO FLUTUANTE WPP ===== -->
+  <a href="https://wa.me/5531986222344?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="wpp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
