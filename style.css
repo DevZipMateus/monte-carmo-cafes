@@ -1025,45 +1025,63 @@ ul  { list-style: none; }
 }
 
 /* ── RESPONSIVIDADE ──────────────────────────────────────────── */
-@media (max-width: 1023px) {
-  /* Desativa parallax em mobile/tablet */
-  .proposito-section,
-  .servicos-section,
-  .contato-section {
-    background-attachment: scroll, scroll;
+
+/* Widescreen / 4K (≥ 1440px) */
+@media (min-width: 1440px) {
+  .container,
+  .header-inner,
+  .footer-inner {
+    max-width: 1380px;
+    padding: 0 48px;
   }
 
-  .hero {
-    background-attachment: scroll;
-  }
+  .section { padding: 120px 0; }
+
+  .section-title { font-size: 3.4rem; }
+  .hero-logo { height: 190px; }
+}
+
+/* Laptop médio (1024px – 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav-desktop { gap: 20px; }
+
+  .sobre-grid { gap: 44px; }
+  .sobre-img-wrap img { height: 420px; }
+
+  .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contato-grid { gap: 44px; }
+}
+
+/* Tablet + Mobile (≤ 1023px) */
+@media (max-width: 1023px) {
+  /* Desativa parallax */
+  .proposito-section,
+  .servicos-section,
+  .contato-section { background-attachment: scroll, scroll; }
+  .hero { background-attachment: scroll; }
+
+  .section { padding: 72px 0; }
+  .section-header { margin-bottom: 44px; }
 
   .nav-desktop { display: none; }
   .menu-toggle { display: flex; }
 
   .sobre-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
-
-  .sobre-img-wrap img { height: 320px; }
+  .sobre-img-wrap img { height: 340px; }
 
   .proposito-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
-  .produtos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+  .servicos-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .servicos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
   .gal-tall  { grid-row:    auto; }
   .gal-wide  { grid-column: auto; }
 
@@ -1078,32 +1096,80 @@ ul  { list-style: none; }
   }
 }
 
+/* Mobile (≤ 600px) */
 @media (max-width: 600px) {
-  .section { padding: 64px 0; }
+  .section { padding: 56px 0; }
+  .container { padding: 0 16px; }
+  .section-header { margin-bottom: 36px; }
 
   .hero-logo { height: 120px; }
-
-  .badges-row { gap: 12px; }
-  .badge-item { padding: 16px 20px; }
-
-  .produtos-grid {
-    grid-template-columns: 1fr;
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 
-  .servicos-grid {
-    grid-template-columns: 1fr;
-  }
+  .sobre-img-wrap img { height: 260px; }
 
-  .galeria-grid {
-    grid-template-columns: 1fr;
-  }
+  .badges-row { gap: 10px; }
+  .badge-item { padding: 14px 14px; }
+  .badge-num  { font-size: 1.9rem; }
 
-  .contato-grid {
-    grid-template-columns: 1fr;
-  }
+  .proposito-cards { grid-template-columns: 1fr; }
+
+  .produtos-grid { grid-template-columns: 1fr; }
+  .servicos-grid { grid-template-columns: 1fr; }
+
+  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contato-grid { grid-template-columns: 1fr; }
 
   .btn-wpp-grande {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Mobile pequeno (≤ 480px) */
+@media (max-width: 480px) {
+  .section { padding: 48px 0; }
+
+  .hero-logo { height: 96px; }
+
+  .galeria-grid { grid-template-columns: 1fr; }
+
+  .prop-card  { padding: 28px 20px; }
+  .servico-item { padding: 24px 16px; }
+
+  .sobre-img-wrap img { height: 220px; }
+
+  .badge-item { padding: 12px 10px; min-width: 80px; }
+  .badge-num  { font-size: 1.7rem; }
+  .badge-label { font-size: .72rem; }
+}
+
+/* Mobile muito pequeno (≤ 360px) */
+@media (max-width: 360px) {
+  .section { padding: 40px 0; }
+  .container { padding: 0 12px; }
+
+  .hero-logo { height: 80px; }
+
+  .section-title { font-size: 1.75rem; }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-wpp-grande { font-size: .8rem; padding: 12px 20px; }
+
+  .badge-item { padding: 10px 8px; }
+  .badge-num  { font-size: 1.5rem; }
+
+  .produto-info { padding: 16px; }
+  .contato-item { padding: 16px; gap: 14px; }
 }
