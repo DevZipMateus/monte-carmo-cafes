@@ -937,6 +937,13 @@ ul  { list-style: none; }
 
 .contato-wpp strong { color: var(--ouro-claro); }
 
+.contato-mapa {
+  margin-top: 48px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
 /* ── FOOTER ─────────────────────────────────────────────────── */
 .footer {
   background: var(--espresso2);
