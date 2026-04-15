@@ -620,9 +620,10 @@ ul  { list-style: none; }
 .prod-carousel {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius);
+  border-radius: 20px;
   width: 100%;
   height: 460px;
+  box-shadow: 0 8px 40px rgba(58,33,16,.22);
 }
 
 .prod-carousel-track {
@@ -645,35 +646,10 @@ ul  { list-style: none; }
   display: block;
 }
 
-.prod-carousel-dots {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 3;
-}
-
-.prod-carousel-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.45);
-  border: none;
-  cursor: pointer;
-  transition: background .3s, transform .3s;
-  padding: 0;
-}
-
-.prod-carousel-dot.active {
-  background: var(--ouro);
-  transform: scale(1.4);
-}
+.prod-carousel-dots { display: none; }
 
 @media (max-width: 600px) {
   .prod-carousel { height: 260px; }
-  .prod-carousel-dots { bottom: 52px; }
 }
 
 /* Banner produtos */
