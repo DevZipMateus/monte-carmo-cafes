@@ -208,3 +208,44 @@ lightboxOverlay.addEventListener('click', closeLightbox);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
 });
+
+/* ── CARROSSEL NOSSOS PRODUTOS ──────────────────────────────── */
+(function() {
+  const track = document.getElementById('prodCarouselTrack');
+  const dotsEl = document.getElementById('prodCarouselDots');
+  if (!track || !dotsEl) return;
+
+  const slides = track.querySelectorAll('.prod-carousel-slide');
+  const total = slides.length;
+  let cur = 0, timer;
+
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'prod-carousel-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    dotsEl.querySelectorAll('.prod-carousel-dot')[cur].classList.remove('active');
+    cur = ((n % total) + total) % total;
+    track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dotsEl.querySelectorAll('.prod-carousel-dot')[cur].classList.add('active');
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(cur + 1), 3000);
+  }
+
+  let touchX = 0;
+  track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? cur + 1 : cur - 1);
+  }, { passive: true });
+
+  resetTimer();
+})();
