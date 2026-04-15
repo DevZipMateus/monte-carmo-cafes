@@ -869,17 +869,16 @@ ul  { list-style: none; }
 .galeria-section .section-title { color: var(--creme); }
 
 .galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  align-items: start;
+  column-count: 3;
+  column-gap: 12px;
 }
 
 .gal-item {
+  break-inside: avoid;
+  margin-bottom: 12px;
   overflow: hidden;
   border-radius: var(--radius);
   cursor: pointer;
-  background: rgba(0,0,0,.15);
 }
 
 .gal-item img {
@@ -1178,7 +1177,7 @@ ul  { list-style: none; }
   .produtos-grid { grid-template-columns: repeat(2, 1fr); }
   .servicos-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+  .galeria-grid { column-count: 2; }
 
   .contato-grid {
     grid-template-columns: 1fr;
@@ -1221,7 +1220,7 @@ ul  { list-style: none; }
   .produtos-grid { grid-template-columns: 1fr; }
   .servicos-grid { grid-template-columns: 1fr; }
 
-  .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+  .galeria-grid { column-count: 2; }
 
   .contato-grid { grid-template-columns: 1fr; }
 
@@ -1237,7 +1236,7 @@ ul  { list-style: none; }
 
   .hero-logo { height: 96px; }
 
-  .galeria-grid { grid-template-columns: 1fr; }
+  .galeria-grid { column-count: 1; }
 
   .prop-card  { padding: 28px 20px; }
   .servico-item { padding: 24px 16px; }
