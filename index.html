@@ -328,18 +328,12 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- ===== MODAL WHATSAPP ===== -->
-  <div class="wa-modal-overlay" id="waModal" onclick="closeWAModalBg(event)">
-    <div class="wa-modal-box">
-      <button class="wa-modal-close" onclick="closeWAModal()" aria-label="Fechar">
-        <i class="fas fa-times"></i>
-      </button>
-      <div class="wa-modal-icon">
-        <i class="fab fa-whatsapp"></i>
-      </div>
-      <h3 class="wa-modal-title">Como podemos te atender?</h3>
-      <p class="wa-modal-sub">Escolha a opção que melhor descreve você</p>
-      <div class="wa-modal-btns">
+  <!-- ===== BOTTOM SHEET WHATSAPP ===== -->
+  <div class="wa-sheet-overlay" id="waSheet" onclick="closeWAModalBg(event)">
+    <div class="wa-sheet">
+      <div class="wa-sheet-handle"></div>
+      <p class="wa-sheet-title">Como posso te atender?</p>
+      <div class="wa-sheet-btns">
         <button class="wa-btn wa-btn-pf" onclick="waGoTo('pf')">
           <i class="fas fa-user"></i>
           <div>
@@ -366,15 +360,15 @@
     var WA_MSG_PF  = 'Ol\u00e1! Vim pelo site e gostaria de mais informa\u00e7\u00f5es sobre os caf\u00e9s especiais Monte Carmo.';
     var WA_MSG_B2B = 'Ol\u00e1! Represento uma empresa e gostaria de informa\u00e7\u00f5es sobre fornecimento B2B da Monte Carmo Caf\u00e9s Especiais.';
     function openWAModal() {
-      document.getElementById('waModal').classList.add('open');
+      document.getElementById('waSheet').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
     function closeWAModal() {
-      document.getElementById('waModal').classList.remove('open');
+      document.getElementById('waSheet').classList.remove('open');
       document.body.style.overflow = '';
     }
     function closeWAModalBg(e) {
-      if (e.target === document.getElementById('waModal')) closeWAModal();
+      if (e.target === document.getElementById('waSheet')) closeWAModal();
     }
     function waGoTo(tipo) {
       closeWAModal();
@@ -382,8 +376,8 @@
       window.open('https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(msg), '_blank');
     }
     document.addEventListener('keydown', function(e) {
-      var m = document.getElementById('waModal');
-      if (e.key === 'Escape' && m && m.classList.contains('open')) closeWAModal();
+      var s = document.getElementById('waSheet');
+      if (e.key === 'Escape' && s && s.classList.contains('open')) closeWAModal();
     });
   </script>
   <script src="script.js?v=2.1"></script>
