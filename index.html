@@ -81,7 +81,7 @@
       <p class="hero-sub">Do grão à xícara, com arte e paixão</p>
       <div class="hero-btns">
         <a href="#produtos" class="btn-primary">Nossos Cafés</a>
-        <a href="#contato"  class="btn-outline">Falar Conosco</a>
+        <a href="javascript:void(0)" onclick="openWAModal()" class="btn-outline">Falar Conosco</a>
       </div>
     </div>
     <a href="#sobre" class="hero-scroll" aria-label="Rolar para baixo">
@@ -340,22 +340,22 @@
       <h3 class="wa-modal-title">Como podemos te atender?</h3>
       <p class="wa-modal-sub">Escolha a opção que melhor descreve você</p>
       <div class="wa-modal-btns">
-        <a id="waBtnPF" href="#" target="_blank" class="wa-btn wa-btn-pf" onclick="closeWAModal()">
+        <button class="wa-btn wa-btn-pf" onclick="waGoTo('pf')">
           <i class="fas fa-user"></i>
           <div>
             <strong>Pessoa Física</strong>
             <span>Quero comprar cafés especiais</span>
           </div>
           <i class="fas fa-arrow-right wa-arrow"></i>
-        </a>
-        <a id="waBtnB2B" href="#" target="_blank" class="wa-btn wa-btn-b2b" onclick="closeWAModal()">
+        </button>
+        <button class="wa-btn wa-btn-b2b" onclick="waGoTo('b2b')">
           <i class="fas fa-briefcase"></i>
           <div>
             <strong>B2B / Empresa</strong>
             <span>Quero fornecimento para meu negócio</span>
           </div>
           <i class="fas fa-arrow-right wa-arrow"></i>
-        </a>
+        </button>
       </div>
     </div>
   </div>

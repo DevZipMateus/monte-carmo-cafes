@@ -251,33 +251,31 @@ document.addEventListener('keydown', e => {
 })();
 
 /* ── MODAL WHATSAPP (PF / B2B) ──────────────────────────────── */
-(function() {
-  var WA_NUM = '5585991885161';
-  var MSG_PF  = 'Olá! Vim pelo site e gostaria de mais informações sobre os cafés especiais Monte Carmo.';
-  var MSG_B2B = 'Olá! Represento uma empresa e gostaria de informações sobre fornecimento B2B da Monte Carmo Cafés Especiais.';
+var WA_NUM    = '5585991885161';
+var WA_MSG_PF  = 'Olá! Vim pelo site e gostaria de mais informações sobre os cafés especiais Monte Carmo.';
+var WA_MSG_B2B = 'Olá! Represento uma empresa e gostaria de informações sobre fornecimento B2B da Monte Carmo Cafés Especiais.';
 
-  var modal    = document.getElementById('waModal');
-  var btnPF    = document.getElementById('waBtnPF');
-  var btnB2B   = document.getElementById('waBtnB2B');
+function openWAModal() {
+  document.getElementById('waModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 
-  btnPF.href  = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(MSG_PF);
-  btnB2B.href = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(MSG_B2B);
+function closeWAModal() {
+  document.getElementById('waModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-  window.openWAModal = function() {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
+function closeWAModalBg(e) {
+  if (e.target === document.getElementById('waModal')) closeWAModal();
+}
 
-  window.closeWAModal = function() {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  };
+function waGoTo(tipo) {
+  closeWAModal();
+  var msg = tipo === 'b2b' ? WA_MSG_B2B : WA_MSG_PF;
+  window.open('https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(msg), '_blank');
+}
 
-  window.closeWAModalBg = function(e) {
-    if (e.target === modal) closeWAModal();
-  };
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.classList.contains('open')) closeWAModal();
-  });
-})();
+document.addEventListener('keydown', function(e) {
+  var modal = document.getElementById('waModal');
+  if (e.key === 'Escape' && modal && modal.classList.contains('open')) closeWAModal();
+});
