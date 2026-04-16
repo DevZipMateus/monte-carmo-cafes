@@ -360,6 +360,32 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    /* Funções do modal WA — inline para garantir disponibilidade imediata */
+    var WA_NUM    = '5585991885161';
+    var WA_MSG_PF  = 'Ol\u00e1! Vim pelo site e gostaria de mais informa\u00e7\u00f5es sobre os caf\u00e9s especiais Monte Carmo.';
+    var WA_MSG_B2B = 'Ol\u00e1! Represento uma empresa e gostaria de informa\u00e7\u00f5es sobre fornecimento B2B da Monte Carmo Caf\u00e9s Especiais.';
+    function openWAModal() {
+      document.getElementById('waModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeWAModal() {
+      document.getElementById('waModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function closeWAModalBg(e) {
+      if (e.target === document.getElementById('waModal')) closeWAModal();
+    }
+    function waGoTo(tipo) {
+      closeWAModal();
+      var msg = tipo === 'b2b' ? WA_MSG_B2B : WA_MSG_PF;
+      window.open('https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(msg), '_blank');
+    }
+    document.addEventListener('keydown', function(e) {
+      var m = document.getElementById('waModal');
+      if (e.key === 'Escape' && m && m.classList.contains('open')) closeWAModal();
+    });
+  </script>
+  <script src="script.js?v=2.1"></script>
 </body>
 </html>

@@ -250,32 +250,4 @@ document.addEventListener('keydown', e => {
   resetTimer();
 })();
 
-/* ── MODAL WHATSAPP (PF / B2B) ──────────────────────────────── */
-var WA_NUM    = '5585991885161';
-var WA_MSG_PF  = 'Olá! Vim pelo site e gostaria de mais informações sobre os cafés especiais Monte Carmo.';
-var WA_MSG_B2B = 'Olá! Represento uma empresa e gostaria de informações sobre fornecimento B2B da Monte Carmo Cafés Especiais.';
-
-function openWAModal() {
-  document.getElementById('waModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeWAModal() {
-  document.getElementById('waModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function closeWAModalBg(e) {
-  if (e.target === document.getElementById('waModal')) closeWAModal();
-}
-
-function waGoTo(tipo) {
-  closeWAModal();
-  var msg = tipo === 'b2b' ? WA_MSG_B2B : WA_MSG_PF;
-  window.open('https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(msg), '_blank');
-}
-
-document.addEventListener('keydown', function(e) {
-  var modal = document.getElementById('waModal');
-  if (e.key === 'Escape' && modal && modal.classList.contains('open')) closeWAModal();
-});
+/* ── MODAL WHATSAPP — definido inline no HTML (ver index.html) ── */
