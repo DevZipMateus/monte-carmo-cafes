@@ -66,7 +66,7 @@
     </ul>
     <div class="nav-social">
       <a href="https://www.instagram.com/montecarmocafes/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/5531986222344" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="javascript:void(0)" onclick="openWAModal()" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </nav>
   <div class="nav-overlay" id="navOverlay"></div>
@@ -170,7 +170,7 @@
           <div class="prod-carousel-dots" id="prodCarouselDots"></div>
         </div>
         <div class="produtos-banner-overlay">
-          <a href="https://wa.me/5531986222344?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20Monte%20Carmo." target="_blank" class="btn-produtos-banner">
+          <a href="javascript:void(0)" onclick="openWAModal()" class="btn-produtos-banner">
             <i class="fab fa-whatsapp"></i> Para saber mais, entre em contato
           </a>
         </div>
@@ -215,7 +215,7 @@
         </div>
       </div>
       <div class="servicos-cta reveal">
-        <a href="https://wa.me/5531986222344?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20fornecimento%20B2B." target="_blank" class="btn-wpp-grande">
+        <a href="javascript:void(0)" onclick="openWAModal()" class="btn-wpp-grande">
           <i class="fab fa-whatsapp"></i>Quero ser parceiro
         </a>
       </div>
@@ -273,7 +273,7 @@
             <i class="fab fa-whatsapp"></i>
             <div>
               <strong>WhatsApp</strong>
-              <span>(31) 98622-2344</span>
+              <span>(85) 99188-5161</span>
             </div>
           </div>
           <div class="contato-item">
@@ -286,7 +286,7 @@
         </div>
         <div class="contato-wpp reveal">
           <p>Atendemos de <strong>segunda a sábado</strong>, das <strong>8h às 18h</strong>. Resposta rápida e personalizada!</p>
-          <a href="https://wa.me/5531986222344?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20os%20cafés%20especiais." target="_blank" class="btn-wpp-grande">
+          <a href="javascript:void(0)" onclick="openWAModal()" class="btn-wpp-grande">
             <i class="fab fa-whatsapp"></i>Iniciar conversa no WhatsApp
           </a>
         </div>
@@ -311,7 +311,7 @@
       <p class="footer-copy">© 2025 Monte Carmo Cafés Especiais — Todos os direitos reservados</p>
       <div class="footer-social">
         <a href="https://www.instagram.com/montecarmocafes/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/5531986222344" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="javascript:void(0)" onclick="openWAModal()" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
   </footer>
@@ -324,9 +324,41 @@
   </div>
 
   <!-- ===== BOTÃO FLUTUANTE WPP ===== -->
-  <a href="https://wa.me/5531986222344?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="wpp-float" aria-label="WhatsApp">
+  <a href="javascript:void(0)" onclick="openWAModal()" class="wpp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- ===== MODAL WHATSAPP ===== -->
+  <div class="wa-modal-overlay" id="waModal" onclick="closeWAModalBg(event)">
+    <div class="wa-modal-box">
+      <button class="wa-modal-close" onclick="closeWAModal()" aria-label="Fechar">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="wa-modal-icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <h3 class="wa-modal-title">Como podemos te atender?</h3>
+      <p class="wa-modal-sub">Escolha a opção que melhor descreve você</p>
+      <div class="wa-modal-btns">
+        <a id="waBtnPF" href="#" target="_blank" class="wa-btn wa-btn-pf" onclick="closeWAModal()">
+          <i class="fas fa-user"></i>
+          <div>
+            <strong>Pessoa Física</strong>
+            <span>Quero comprar cafés especiais</span>
+          </div>
+          <i class="fas fa-arrow-right wa-arrow"></i>
+        </a>
+        <a id="waBtnB2B" href="#" target="_blank" class="wa-btn wa-btn-b2b" onclick="closeWAModal()">
+          <i class="fas fa-briefcase"></i>
+          <div>
+            <strong>B2B / Empresa</strong>
+            <span>Quero fornecimento para meu negócio</span>
+          </div>
+          <i class="fas fa-arrow-right wa-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

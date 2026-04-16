@@ -249,3 +249,35 @@ document.addEventListener('keydown', e => {
 
   resetTimer();
 })();
+
+/* ── MODAL WHATSAPP (PF / B2B) ──────────────────────────────── */
+(function() {
+  var WA_NUM = '5585991885161';
+  var MSG_PF  = 'Olá! Vim pelo site e gostaria de mais informações sobre os cafés especiais Monte Carmo.';
+  var MSG_B2B = 'Olá! Represento uma empresa e gostaria de informações sobre fornecimento B2B da Monte Carmo Cafés Especiais.';
+
+  var modal    = document.getElementById('waModal');
+  var btnPF    = document.getElementById('waBtnPF');
+  var btnB2B   = document.getElementById('waBtnB2B');
+
+  btnPF.href  = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(MSG_PF);
+  btnB2B.href = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent(MSG_B2B);
+
+  window.openWAModal = function() {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  window.closeWAModal = function() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  window.closeWAModalBg = function(e) {
+    if (e.target === modal) closeWAModal();
+  };
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeWAModal();
+  });
+})();
